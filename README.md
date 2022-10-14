@@ -8,47 +8,9 @@ Detection             |  Segmentation |  Classification
 :-------------------------:|:-------------------------:|:-------------------------:
 <img src="assets/images/floor_detection.gif" style="max-height:400px;"/>  |  <img src="assets/images/elevation_window_area.gif" style="max-height:400px;"/> | <img src="assets/images/roof_classification.png" style="max-height:400px;"/>
 
-## Modules
-
-### Classifiers
-
-Classifiers sort buildings into categories:
-
-| Module Name | Output | Regions whose data the model has trained on | Dataset Source |
-|---|---|---|---|
-| Roof Shape Classifier | Roof types:<br>Flat, Gabled, Hipped, | Texas, Louisiana, Mississippi, Alabama, Georgia, Florida, South Carolina, North Carolina, Virginia, New Jersey | Google Static Satellite Maps |
-| Occupancy Classifier | Single family/multi family/commercial use | Entire US | Google Street View |
-| Year Built Classifier | One of 6 time periods | New Jersey, Louisiana | Google Street View |
-| Roof Cover Classifier  | If a building has soft-story or not | Entire US | Google Street View |
-
-### Detectors
-
-Detectors locate objects in images:
-
-| Module Name | Output | Regions whose data the model has trained on | Dataset Source |
-|---|---|---|---|
-| Garage Detector | Bounding Box of Garage | Unkown (not disclosed by the developer) | Google Street View/Zooniverse |
-| Chimney Detector | Bounding Box of Chimney | Unkown (not disclosed by the developer) | Google Street View/Zooniverse |
-| Number of Floors Detector | Bounding Box of floors | New Jersey, Louisiana | Google Street View |
 
 
-### Segmentors
 
-| Module Name | Output | Regions whose data the model has trained on | Dataset Source |
-|---|---|---|---|
-| Facade Parser | pixels of roof, facade and window | Unknown | Unknown
-
-Facade Parser segements facade of a buidling into roof, facade and window, enables automated predictions of building eave height, roof peak height, roof pitch angle and ratio of window area to facade area from image input.
-
-
-### Learn More
-
-Instrcutions for each module can be found in the [documentation](https://nheri-simcenter.github.io/BRAILS-Documentation/common/user_manual/modules/modules.html).
-
-## Workflow
-
-Given the a quiried location, we get building footprints from [Microsoft. US Building Footprints](https://github.com/microsoft/USBuildingFootprints), and 
-and all models (apart from segementation models) are trained on images acquired from Google (Street View and Static Maps) or Zooniverse, below are a few samples from the trainig data.
 
 ## Quick Start
 
@@ -95,10 +57,45 @@ invGenerator.inventory
 ```
 ### User Guide
 
-Full documentation is available at https://nheri-simcenter.github.io/BRAILS-Documentation. You can also compile the latest doc following `./doc/README.md`.
+Full documentation is available at https://nheri-simcenter.github.io/BRAILS-Documentation. You can also compile the latest doc following `./doc/README.md`
+
+### Modules
+
+`InventoryGenerator` generates differnent attributes of a region by querying independent modules, for now, we provide the modules below:
+
+***Classifiers*** sort buildings into categories:
+
+| Module Name | Output | Regions whose data the model has trained on | Dataset Source |
+|---|---|---|---|
+| Roof Shape Classifier | Roof types:<br>Flat, Gabled, Hipped, | Texas, Louisiana, Mississippi, Alabama, Georgia, Florida, South Carolina, North Carolina, Virginia, New Jersey | Google Static Satellite Maps |
+| Occupancy Classifier | Single family/multi family/commercial use | Entire US | Google Street View |
+| Year Built Classifier | One of 6 time periods | New Jersey, Louisiana | Google Street View |
+| Roof Cover Classifier  | If a building has soft-story or not | Entire US | Google Street View |
+
+***Detectors*** locate objects in images:
+
+| Module Name | Output | Regions whose data the model has trained on | Dataset Source |
+|---|---|---|---|
+| Garage Detector | Bounding Box of Garage | Unkown (not disclosed by the developer) | Google Street View/Zooniverse |
+| Chimney Detector | Bounding Box of Chimney | Unkown (not disclosed by the developer) | Google Street View/Zooniverse |
+| Number of Floors Detector | Bounding Box of floors | New Jersey, Louisiana | Google Street View |
 
 
+***Segementer*** segements facade of a buidling into roof, facade and window, enables automated predictions of building eave height, roof peak height, roof pitch angle and ratio of window area to facade area from image input.
+
+| Module Name | Output | Regions whose data the model has trained on | Dataset Source |
+|---|---|---|---|
+| Facade Parser | pixels of roof, facade and window | Unknown | Unknown
+
+
+### Learn More
+Instrcutions for each module can be found in the [documentation](https://nheri-simcenter.github.io/BRAILS-Documentation/common/user_manual/modules/modules.html).
+
+### Data Samples
+For a quiried location, we get building footprints from [Microsoft. US Building Footprints](https://github.com/microsoft/USBuildingFootprints), and 
+and all models (apart from segementation models) are trained on images acquired from Google (Street View and Static Maps), due to license restrictions we cannot share the whole dataset,  here are some samples of the training data:
 ![Samples of trainig data for seperate tasks](assets/images/data_sample.png)
+
 
 
 ## Acknowledgements
