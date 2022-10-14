@@ -55,7 +55,7 @@ invGenerator.generate(attributes=['numstories','roofshape','buildingheight'])
 invGenerator.inventory
 
 ```
-### User Guide
+### Documentaion
 
 Full documentation is available at https://nheri-simcenter.github.io/BRAILS-Documentation. You can also compile the latest doc following `./doc/README.md`
 
