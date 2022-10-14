@@ -41,13 +41,14 @@ Detectors locate objects in images:
 Facade Parser segements facade of a buidling into roof, facade and window, enables automated predictions of building eave height, roof peak height, roof pitch angle and ratio of window area to facade area from image input.
 
 
-
-
 ### Learn More
 
 Instrcutions for each module can be found in the [documentation](https://nheri-simcenter.github.io/BRAILS-Documentation/common/user_manual/modules/modules.html).
 
+## Workflow
 
+Given the a quiried location, we get building footprints from [Microsoft. US Building Footprints](https://github.com/microsoft/USBuildingFootprints), and 
+and all models (apart from segementation models) are trained on images acquired from Google (Street View and Static Maps) or Zooniverse, below are a few samples from the trainig data.
 
 ## Quick Start
 
@@ -92,18 +93,12 @@ invGenerator.generate(attributes=['numstories','roofshape','buildingheight'])
 invGenerator.inventory
 
 ```
+### User Guide
 
-## Learn More
-
-Full documentation is available at https://nheri-simcenter.github.io/BRAILS-Documentation. You can also compile the latest doc following 
-
-## Workflow
-
-Given the a quiried location, we get building footprints from [Microsoft. US Building Footprints](https://github.com/microsoft/USBuildingFootprints), and 
-and all models (apart from segementation models) are trained on images acquired from Google (Street View and Static Maps) or Zooniverse, below are a few samples from the trainig data.
+Full documentation is available at https://nheri-simcenter.github.io/BRAILS-Documentation. You can also compile the latest doc following `./doc/README.md`.
 
 
-![Samples of trainig data for seperate tasks](data_sample.png "")
+![Samples of trainig data for seperate tasks](assets/images/data_sample.png)
 
 
 ## Acknowledgements
