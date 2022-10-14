@@ -32,7 +32,7 @@ Detectors locate objects in images:
 | Number of Floors Detector | Bounding Box of floors | New Jersey, Louisiana | Google Street View |
 
 
-### Segmentation
+### Segmentors
 
 | Module Name | Output | Regions whose data the model has trained on | Dataset Source |
 |---|---|---|---|
@@ -57,7 +57,7 @@ You can [try it on Google Colab](https://colab.research.google.com/drive/1zspDwK
 
 ### Installation:
 
-Brails is compatible for `python 3.7` and above.
+Brails is compatible with `python 3.7` and above.
 
 The easiest way to install the latest version of BRAILS is using ``pip``:
 ```
@@ -74,7 +74,7 @@ The primary input to ``InventoryGenerator`` is location. ``InventoryGenerator`` 
 3. bounding box of a region 
 4. A GeoJSON file containing building footprints.
 
-Please note that you will need a Google API Key to run ``InventoryGenerator``, [here are instructions on how to create it](https://developers.google.com/maps/documentation/embed/get-api-key).
+Please note that you will need a **Google API Key** to run ``InventoryGenerator``, [here are instructions on how to create it](https://developers.google.com/maps/documentation/embed/get-api-key).
 
 ```python
 #import InventoryGenerator:
