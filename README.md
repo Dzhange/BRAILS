@@ -4,6 +4,10 @@
 
 ![Overview of the pipeline, maybe we can also put some gifs from the slides here? Those look pretty good](teaser.png "Title")
 
+Detection             |  Segmentation |  Classification 
+:-------------------------:|:-------------------------:|:-------------------------:
+<img src="assets/images/floor_detection.gif" alt="drawing" style="height:400px;"/>  |  <img src="assets/images/elevation_window_area.gif" alt="drawing" style="height:400px;"/> | <img src="assets/images/roof_classification.png" alt="drawing" style="height:400px;"/>
+
 ## Quick Start
 
 ### Try it:
