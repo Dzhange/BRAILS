@@ -6,7 +6,7 @@
 
 Detection             |  Segmentation |  Classification 
 :-------------------------:|:-------------------------:|:-------------------------:
-<img src="assets/images/floor_detection.gif" alt="drawing" style="height:400px;"/>  |  <img src="assets/images/elevation_window_area.gif" alt="drawing" style="height:400px;"/> | <img src="assets/images/roof_classification.png" alt="drawing" style="height:400px;"/>
+<img src="assets/images/floor_detection.gif" style="height:400px;"/>  |  <img src="assets/images/elevation_window_area.gif" style="height:400px;"/> | <img src="assets/images/roof_classification.png" style="height:400px;"/>
 
 ## Quick Start
 
