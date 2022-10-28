@@ -2,13 +2,7 @@
 
 **BRAILS** (Building Recognition using AI at Large-Scale) provides a set of Python modules that utilize deep learning (DL), and computer vision (CV) techniques to extract information from satellite and street level images. The BRAILS framework also provides turn-key applications allowing users to put individual modules together to determine multiple attributes in a single pass or train general-purpose image classification, object detection, or semantic segmentation models.
 
-![Overview of the pipeline](pipeline.png "pipeline")
-
-Detection             |  Segmentation |  Classification 
-:-------------------------:|:-------------------------:|:-------------------------:
-<img src="assets/images/floor_detection.gif" style="max-height:400px;"/>  |  <img src="assets/images/elevation_window_area.gif" style="max-height:400px;"/> | <img src="assets/images/roof_classification.png" style="max-height:400px;"/>
-
-
+![Overview of the pipeline](assets/images/brails-demo.gif "pipeline")
 
 
 
@@ -61,7 +55,11 @@ Full documentation is available at https://nheri-simcenter.github.io/BRAILS-Docu
 
 ### Modules
 
-`InventoryGenerator` generates differnent attributes of a region by querying independent modules, for now, we provide the modules below:
+Detection             |  Segmentation |  Classification 
+:-------------------------:|:-------------------------:|:-------------------------:
+<img src="assets/images/floor_detection.gif" style="max-height:400px;"/>  |  <img src="assets/images/elevation_window_area.gif" style="max-height:400px;"/> | <img src="assets/images/roof_classification.png" style="max-height:400px;"/>
+
+`InventoryGenerator` generates differnent attributes of a region by querying independent modules, including detection, segmentation and classification. For now we provide the modules below:
 
 ***Classifiers*** sort buildings into categories:
 
@@ -96,6 +94,9 @@ For a quiried location, we get building footprints from [Microsoft. US Building 
 and all models (apart from segementation models) are trained on images acquired from Google (Street View and Static Maps), due to license restrictions we cannot share the whole dataset,  here are some samples of the training data:
 ![Samples of trainig data for seperate tasks](assets/images/data_sample.png)
 
+Cory Hall, Berkley in Microsoft. US Building Footprints          |  Cory Hall, Berkley in Google Street View 
+:-------------------------:|:-------------------------:
+<img src="assets/images/MS_footprint_coryhall.png" style="max-height:400px;"/>  |  <img src="assets/images/google_street_coryhall.png" style="max-height:400px;"/>
 
 
 ## Acknowledgements
