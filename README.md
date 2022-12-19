@@ -1,6 +1,6 @@
 ## About 
 
-**BRAILS** (Building Recognition using AI at Large-Scale) provides a set of Python modules that utilize deep learning (DL), and computer vision (CV) techniques to extract information from satellite and street level images. The BRAILS framework also provides turn-key applications allowing users to put individual modules together to determine multiple attributes in a single pass or train general-purpose image classification, object detection, or semantic segmentation models.
+**BRAILS** (Building Recognition using AI at Large Scale) provides a set of Python modules that utilize deep learning (DL), and computer vision (CV) techniques to extract information from satellite and street-level images. The BRAILS framework also provides turn-key applications allowing users to put individual modules together to determine multiple attributes in a single pass or train general-purpose image classification, object detection, or semantic segmentation models.
 
 ![Overview of the pipeline](assets/images/brails-demo.gif "pipeline")
 
@@ -59,14 +59,14 @@ Detection             |  Segmentation |  Classification
 :-------------------------:|:-------------------------:|:-------------------------:
 <img src="assets/images/floor_detection.gif" style="max-height:400px;"/>  |  <img src="assets/images/elevation_window_area.gif" style="max-height:400px;"/> | <img src="assets/images/roof_classification.png" style="max-height:400px;"/>
 
-`InventoryGenerator` generates differnent attributes of a region by querying independent modules, including detection, segmentation and classification. For now we provide the modules below:
+`InventoryGenerator` generates different attributes of a region by querying independent modules, including detection, segmentation and classification. For now we provide the modules below:
 
 ***Classifiers*** sort buildings into categories:
 
 | Module Name | Output | Regions whose data the model has trained on | Dataset Source |
 |---|---|---|---|
 | Roof Shape Classifier | Roof types:<br>Flat, Gabled, Hipped, | Texas, Louisiana, Mississippi, Alabama, Georgia, Florida, South Carolina, North Carolina, Virginia, New Jersey | Google Static Satellite Maps |
-| Occupancy Classifier | Single family/multi family/commercial use | Entire US | Google Street View |
+| Occupancy Classifier | Single family/multi-family/commercial use | Entire US | Google Street View |
 | Year Built Classifier | One of 6 time periods | New Jersey, Louisiana | Google Street View |
 | Roof Cover Classifier  | If a building has soft-story or not | Entire US | Google Street View |
 
@@ -79,7 +79,7 @@ Detection             |  Segmentation |  Classification
 | Number of Floors Detector | Bounding Box of floors | New Jersey, Louisiana | Google Street View |
 
 
-***Segementer*** segements facade of a buidling into roof, facade and window, enables automated predictions of building eave height, roof peak height, roof pitch angle and ratio of window area to facade area from image input.
+***Segementer*** segements facade of a building into roof, facade and window, enables automated predictions of building eave height, roof peak height, roof pitch angle, and the ratio of window area to facade area from image input.
 
 | Module Name | Output | Regions whose data the model has trained on | Dataset Source |
 |---|---|---|---|
@@ -91,8 +91,8 @@ Instrcutions for each module can be found in the [documentation](https://nheri-s
 
 ### Data Samples
 For a quiried location, we get building footprints from [Microsoft. US Building Footprints](https://github.com/microsoft/USBuildingFootprints), and 
-and all models (apart from segementation models) are trained on images acquired from Google (Street View and Static Maps), due to license restrictions we cannot share the whole dataset,  here are some samples of the training data:
-![Samples of trainig data for seperate tasks](assets/images/data_sample.png)
+and all models (apart from segementation models) are trained on images acquired from Google (Street View and Static Maps), due to license restrictions we cannot share the whole dataset. Here are some samples of the training data:
+![Samples of training data for separate tasks](assets/images/data_sample.png)
 
 Cory Hall, Berkley in Microsoft. US Building Footprints          |  Cory Hall, Berkley in Google Street View 
 :-------------------------:|:-------------------------:
